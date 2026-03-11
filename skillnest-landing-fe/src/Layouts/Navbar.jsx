@@ -49,7 +49,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="flex items-center"
           >
-            <div className="text-2xl font-bold text-indigo-600">SkillNest</div>
+            <div className="punchline text-2xl font-bold text-indigo-600">SkillNest</div>
           </Link>
 
           {/* Desktop Navigation */}
