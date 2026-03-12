@@ -64,12 +64,12 @@ const Style = () => (
 /* Helper: generate a consistent bg color from a name */
 const avatarColor = (name) => {
   const colors = [
-    ['#e0e7ff','#4f46e5'], // indigo
-    ['#fce7f3','#db2777'], // pink
-    ['#d1fae5','#059669'], // green
-    ['#fef3c7','#d97706'], // amber
-    ['#ede9fe','#7c3aed'], // violet
-    ['#cffafe','#0891b2'], // cyan
+    ['#e0e7ff', '#4f46e5'], // indigo
+    ['#fce7f3', '#db2777'], // pink
+    ['#d1fae5', '#059669'], // green
+    ['#fef3c7', '#d97706'], // amber
+    ['#ede9fe', '#7c3aed'], // violet
+    ['#cffafe', '#0891b2'], // cyan
   ];
   const idx = name.charCodeAt(0) % colors.length;
   return colors[idx];
@@ -81,8 +81,8 @@ const Initials = ({ name, size = 'md' }) => {
   const sizeClass = size === 'lg'
     ? 'h-16 w-16 rounded-2xl text-base'
     : size === 'sm'
-    ? 'h-9 w-9 rounded-xl text-xs'
-    : 'h-12 w-12 rounded-xl text-sm';
+      ? 'h-9 w-9 rounded-xl text-xs'
+      : 'h-12 w-12 rounded-xl text-sm';
   return (
     <div
       className={`avatar-initials flex-shrink-0 ${sizeClass}`}
@@ -95,87 +95,87 @@ const Initials = ({ name, size = 'md' }) => {
 
 export default function Home() {
   const categories = [
-    { icon: <Code size={18}/>, name:'Programming & Tech', count:245 },
-    { icon: <Palette size={18}/>, name:'Design & Creative', count:189 },
-    { icon: <BookOpen size={18}/>, name:'Writing', count:156 },
-    { icon: <Globe size={18}/>, name:'Digital Marketing', count:87 },
-    { icon: <Camera size={18}/>, name:'Handmade', count:74 },
-    { icon: <Music size={18}/>, name:'Education', count:112 },
+    { icon: <Code size={18} />, name: 'Programming & Tech' },
+    { icon: <Palette size={18} />, name: 'Design & Creative' },
+    { icon: <BookOpen size={18} />, name: 'Writing' },
+    { icon: <Globe size={18} />, name: 'Digital Marketing' },
+    { icon: <Camera size={18} />, name: 'Handmade' },
+    { icon: <Music size={18} />, name: 'Education' },
   ];
 
   const featuredStudents = [
     {
-      name:'Ahmad Rizki',
-      skill:'Web Developer',
-      rating:4.9,
-      projects:23,
-      price:'150k',
-      university:'Universitas Indonesia',
-      badge:'Top Rated',
+      name: 'Ahmad Rizki',
+      skill: 'Web Developer',
+      rating: 4.9,
+      projects: 23,
+      price: '150k',
+      university: 'Universitas Indonesia',
+      badge: 'Expert',
       // Young male student, professional look
-      photo:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
     },
     {
-      name:'Sarah Wijaya',
-      skill:'UI/UX Designer',
-      rating:5.0,
-      projects:18,
-      price:'200k',
-      university:'Institut Teknologi Bandung',
-      badge:'Expert',
+      name: 'Sarah Wijaya',
+      skill: 'UI/UX Designer',
+      rating: 5.0,
+      projects: 18,
+      price: '200k',
+      university: 'Institut Teknologi Bandung',
+      badge: 'Expert',
       // Young woman, professional
-      photo:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face',
+      photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face',
     },
     {
-      name:'Budi Santoso',
-      skill:'Content Writer',
-      rating:4.8,
-      projects:31,
-      price:'100k',
-      university:'Universitas Gadjah Mada',
-      badge:'Rising Star',
+      name: 'Budi Santoso',
+      skill: 'Content Writer',
+      rating: 4.8,
+      projects: 31,
+      price: '100k',
+      university: 'Universitas Gadjah Mada',
+      badge: 'Expert',
       // Young man, casual
-      photo:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
+      photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
     },
     {
-      name:'Dian Purnama',
-      skill:'Graphic Designer',
-      rating:4.9,
-      projects:15,
-      price:'175k',
-      university:'Universitas Brawijaya',
-      badge:'Top Rated',
+      name: 'Dian Purnama',
+      skill: 'Graphic Designer',
+      rating: 4.9,
+      projects: 15,
+      price: '175k',
+      university: 'Universitas Brawijaya',
+      badge: 'Expert',
       // Young woman, smiling
-      photo:'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
+      photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
     },
   ];
 
   const testimonials = [
-    { name:'Michael Chen', role:'Klien', content:'SkillNest membantu saya menemukan talenta mahasiswa yang luar biasa untuk proyek website startup saya. Kualitasnya melebihi ekspektasi.' },
-    { name:'Dr. Ratna Sari', role:'Partner Universitas', content:'Platform ini memberikan pengalaman nyata bagi mahasiswa sambil membangun portofolio profesional mereka.' },
-    { name:'Rudi Hermawan', role:'Mahasiswa', content:'Berkat SkillNest, saya bisa mendapatkan penghasilan sambil kuliah dan membangun jaringan profesional.' },
-    { name:'Maya Putri', role:'Klien', content:'Prosesnya mudah dan cepat. Sangat puas dengan hasil kerja para mahasiswa di sini.' },
-    { name:'Andi Kurniawan', role:'Mahasiswa', content:'Platform terbaik untuk memulai karir freelance. Dalam 3 bulan sudah dapat 5 klien tetap!' },
-    { name:'Linda Susanto', role:'Klien', content:'Kualitas output sangat professional. Tim mahasiswa yang saya hire benar-benar berdedikasi.' },
+    { name: 'Michael Chen', role: 'Klien', content: 'SkillNest membantu saya menemukan talenta mahasiswa yang luar biasa untuk proyek website startup saya. Kualitasnya melebihi ekspektasi.' },
+    { name: 'Dr. Ratna Sari', role: 'Partner Universitas', content: 'Platform ini memberikan pengalaman nyata bagi mahasiswa sambil membangun portofolio profesional mereka.' },
+    { name: 'Rudi Hermawan', role: 'Mahasiswa', content: 'Berkat SkillNest, saya bisa mendapatkan penghasilan sambil kuliah dan membangun jaringan profesional.' },
+    { name: 'Maya Putri', role: 'Klien', content: 'Prosesnya mudah dan cepat. Sangat puas dengan hasil kerja para mahasiswa di sini.' },
+    { name: 'Andi Kurniawan', role: 'Mahasiswa', content: 'Platform terbaik untuk memulai karir freelance. Dalam 3 bulan sudah dapat 5 klien tetap!' },
+    { name: 'Linda Susanto', role: 'Klien', content: 'Kualitas output sangat professional. Tim mahasiswa yang saya hire benar-benar berdedikasi.' },
   ];
 
   const stats = [
-    { value:'500+', label:'Mahasiswa Aktif' },
-    { value:'1000+', label:'Proyek Selesai' },
-    { value:'50+', label:'Universitas' },
-    { value:'4.8/5', label:'Rating Rata-rata' },
+    { value: '500+', label: 'Mahasiswa Aktif' },
+    { value: '1000+', label: 'Proyek Selesai' },
+    { value: '50+', label: 'Universitas' },
+    { value: '4.8/5', label: 'Rating Rata-rata' },
   ];
 
   const aboutPoints = [
-    { icon:<Target size={20}/>, title:'Visi Kami', description:'Menjadi platform #1 bagi mahasiswa Indonesia untuk mengembangkan karir profesional' },
-    { icon:<Zap size={20}/>, title:'Misi Kami', description:'Memberdayakan mahasiswa dengan keterampilan praktis dan pengalaman kerja nyata' },
-    { icon:<Shield size={20}/>, title:'Nilai Kami', description:'Trust, Growth, Innovation — Membangun ekosistem freelance yang terpercaya' },
+    { icon: <Target size={20} />, title: 'Visi Kami', description: 'Menjadi platform #1 bagi mahasiswa Indonesia untuk mengembangkan karir profesional' },
+    { icon: <Zap size={20} />, title: 'Misi Kami', description: 'Memberdayakan mahasiswa dengan keterampilan praktis dan pengalaman kerja nyata' },
+    { icon: <Shield size={20} />, title: 'Nilai Kami', description: 'Trust, Growth, Innovation — Membangun ekosistem freelance yang terpercaya' },
   ];
 
   const howItWorks = [
-    { step:'01', title:'Buat Portofolio', description:'Tunjukkan skill, proyek, dan pengalamanmu untuk membangun personal brand' },
-    { step:'02', title:'Tawarkan Jasa', description:'Pasang layanan dengan harga kompetitif dan dapatkan klien pertama' },
-    { step:'03', title:'Mulai Hasilkan', description:'Selesaikan proyek, dapatkan ulasan positif, dan bangun reputasi' },
+    { step: '01', title: 'Buat Portofolio', description: 'Tunjukkan skill, proyek, dan pengalamanmu untuk membangun personal brand' },
+    { step: '02', title: 'Tawarkan Jasa', description: 'Pasang layanan dengan harga kompetitif dan dapatkan klien pertama' },
+    { step: '03', title: 'Mulai Hasilkan', description: 'Selesaikan proyek, dapatkan ulasan positif, dan bangun reputasi' },
   ];
 
   /* Badge color variants */
@@ -232,8 +232,8 @@ export default function Home() {
               ))}
             </div>
             <div className="flex items-center gap-4 text-sm text-gray-400">
-              <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-green-400"/>50+ universitas</span>
-              <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-green-400"/>1000+ proyek</span>
+              <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-green-400" />50+ universitas</span>
+              <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-green-400" />1000+ proyek</span>
             </div>
           </div>
         </div>
@@ -285,7 +285,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CATEGORIES — no "lihat semua" button ── */}
       <section id="categories" className="py-20 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
@@ -296,14 +295,12 @@ export default function Home() {
           <div className="flex gap-3 overflow-x-auto pb-3 sh">
             {categories.map((cat, i) => (
               <button key={i}
-                onClick={() => window.location.href = '/market'}
                 className="cat-pill flex-none flex items-center gap-3 rounded-2xl border border-gray-100 bg-white px-5 py-4 shadow-sm">
                 <div className="cp-icon flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 transition-all duration-200 flex-shrink-0">
                   {cat.icon}
                 </div>
                 <div className="text-left">
                   <p className="cp-name text-sm font-semibold text-gray-900 whitespace-nowrap">{cat.name}</p>
-                  <p className="cp-count text-xs text-gray-400">{cat.count} mahasiswa</p>
                 </div>
               </button>
             ))}
@@ -382,7 +379,6 @@ export default function Home() {
 
             {/* card 0 — tall featured with real photo */}
             <div
-              onClick={() => window.location.href = `/market?student=${featuredStudents[0].name}`}
               className="stu-card lift cursor-pointer rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden md:row-span-2"
             >
               {/* Photo hero area */}
@@ -414,15 +410,12 @@ export default function Home() {
                     <span className="font-semibold text-gray-800">{featuredStudents[0].rating}</span>
                     <span className="text-gray-400">({featuredStudents[0].projects})</span>
                   </div>
-                  <span className="text-sm font-bold text-indigo-600">Rp {featuredStudents[0].price}/jam</span>
                 </div>
               </div>
             </div>
 
-            {/* cards 1,2,3 — compact horizontal with real photo */}
             {featuredStudents.slice(1).map((student, i) => (
               <div key={i}
-                onClick={() => window.location.href = `/market?student=${student.name}`}
                 className="stu-card lift cursor-pointer rounded-2xl border border-gray-100 bg-white p-4 shadow-sm flex items-center gap-4"
               >
                 {/* Circular photo avatar */}
@@ -451,7 +444,6 @@ export default function Home() {
                       <span className="font-semibold text-gray-800">{student.rating}</span>
                       <span className="text-gray-400">({student.projects})</span>
                     </div>
-                    <span className="text-xs font-bold text-indigo-600">Rp {student.price}/jam</span>
                   </div>
                 </div>
               </div>
