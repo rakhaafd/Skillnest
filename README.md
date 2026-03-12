@@ -31,10 +31,26 @@ Rating yang diberikan akan mempengaruhi reputasi siswa sebagai kreator di dalam 
 ## ⭐ Fitur Utama
 - 🔐 **Authentication** — Sistem login untuk mengamankan akses pengguna  
 - 🎨 **Manajemen Karya** — CRUD karya yang dipublikasikan siswa
-- 💳 **Pembayaran** — Sistem Pembayaran yang sepenuhnya diatur oleh pengguna
+- 💳 **Pembayaran** — Sistem pembayaran yang sepenuhnya diatur oleh pengguna
 - 💬 **Review & Rating** — Feedback pengguna setelah transaksi  
 - 👤 **Profile Customization** — Pengaturan profil untuk personal branding  
 - 📊 **Monitoring System** — Dashboard untuk memantau aktivitas dan statistik platform  
+
+---
+
+## 🌐 Arsitektur DNS & Subdomain
+
+SkillNest menggunakan beberapa **subdomain** untuk memisahkan layanan agar lebih modular dan mudah dikelola.
+
+| Subdomain | Fungsi |
+|-----------|--------|
+| **skillnest.site** | Landing page utama platform |
+| **market.skillnest.site** | Marketplace tempat siswa mempublikasikan dan membeli karya |
+| **admin.skillnest.site** | Dashboard admin untuk manajemen sistem |
+| **api.skillnest.site** | Backend API berbasis Laravel yang melayani seluruh request aplikasi |
+| **monitoring.skillnest.site** | Dashboard monitoring server menggunakan Cacti |
+
+DNS untuk domain ini dikonfigurasi menggunakan **BIND9** pada server.
 
 ---
 
@@ -58,12 +74,12 @@ Rating yang diberikan akan mempengaruhi reputasi siswa sebagai kreator di dalam 
 ## 🎯 Tujuan Proyek
 Proyek ini bertujuan untuk memahami implementasi **Infrastructure as a Service (IaaS)** dengan membangun dan mengelola infrastruktur server secara mandiri, termasuk:
 
-- Konfigurasi web server dan DNS  
-- Pengelolaan mail server  
-- Monitoring server  
-- Implementasi proxy server  
-- Integrasi backend dan frontend  
-- Deployment aplikasi pada server  
+- Konfigurasi **Web Server dan DNS**
+- Pengelolaan **Mail Server**
+- Monitoring server
+- Implementasi **Proxy Server**
+- Integrasi backend dan frontend
+- Deployment aplikasi pada server
 
 ---
 
